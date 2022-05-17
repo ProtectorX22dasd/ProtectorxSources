@@ -1,0 +1,28 @@
+﻿<Window x:Class="protector_x_v5.FluxKey"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:protector_x_v5"
+        mc:Ignorable="d"
+        Title="FluxKey" Height="168" Width="260" Background="#FF333333" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid Height="152" VerticalAlignment="Center" HorizontalAlignment="Right" Width="260">
+        <TextBox x:Name="keytext" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Write Key Here And Press Verify Key" VerticalAlignment="Top" Width="211" Margin="0,21,0,0" Background="#FF171717" Foreground="White" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="fluxgetkey" Content="Get Key" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="105" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" Click="fluxgetkey_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="verkey" Content="Verify Key" HorizontalAlignment="Left" Margin="146,100,0,0" VerticalAlignment="Top" Width="104" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" Click="verkey_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Fluxus Key System" Margin="0,58,0,57" Background="{x:Null}" Foreground="White" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>

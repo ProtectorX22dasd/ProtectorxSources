@@ -1,0 +1,282 @@
+﻿<Window x:Name="mainuiis" x:Class="protector_x_v5.mainui"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:protector_x_v5"
+        mc:Ignorable="d"
+        Title="mainui" WindowStyle="None" ResizeMode="NoResize" Width="700" Height="330" Loaded="Window_Loaded" Background="#FF161616" Foreground="{x:Null}" OpacityMask="Black" MouseDown="wndw_mdown" Initialized="mainuiis_Initialized">
+    <Grid x:Name="main_grid">
+        <Grid x:Name="drgbrddd" Margin="663,0,0,314">
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <Button Content="X" Margin="18,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click_1"/>
+            <Button Content="-" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="15" HorizontalAlignment="Left" Width="18" Click="Button_Click_2"/>
+
+        </Grid>
+        <Grid x:Name="ooooohmaygad" Background="#222222" Margin="0,0,669,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="29*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="s" Margin="4,53,4,10" BorderBrush="{x:Null}" Grid.Row="2" Click="piro_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/test_menu.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="settingsbut" Margin="4,16,4,89" BorderBrush="{x:Null}" Click="settings_clck" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-settings-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="shub" Margin="4,99,4,120" BorderBrush="{x:Null}" Click="shub_clck" Grid.RowSpan="2">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-hub-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="executorbtn" Margin="4,68,4,22" BorderBrush="{x:Null}" Click="executorbtn_clck">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-source-code-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="homebtn" Margin="4,37,4,53" BorderBrush="{x:Null}" Click="homclck">
+                <Button.Background>
+                    <ImageBrush ImageSource="/icons8-home-96.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+
+
+        </Grid>
+        <Grid x:Name="ExecutorGrid" Margin="36,0,0,0" Visibility="Hidden">
+            <TabControl
+                Name="EditTabs"
+                Background="Transparent"
+                BorderThickness="0"
+                Opacity="1"
+                Style="{StaticResource Tabs}" Margin="0,21,117,0" Height="272" VerticalAlignment="Top">
+                <TabItem
+                    Name="MainTab"
+                    Header="Main Tab"
+                    Background="#232b2b"
+                    Style="{StaticResource Tab}">
+
+                    <avalonEdit:TextEditor Style="{DynamicResource TextEditorStyle1}" xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Name="AvalonText" Grid.Row="1" Background="#212121" ShowLineNumbers="True" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Foreground="White" FontFamily="Yu Gothic UI Semibold" Text="" Grid.RowSpan="3" Height="246" HorizontalAlignment="Center" Width="543"/>
+
+
+
+                </TabItem>
+            </TabControl>
+            <Button x:Name="ExecBtnExc" Content="Execute" HorizontalAlignment="Left" Margin="3,298,0,0" VerticalAlignment="Top" Click="Execute_Button_Click" Width="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft Tai Le">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="SaveFileBtnExc" Content="Save File" HorizontalAlignment="Left" Margin="483,298,0,0" VerticalAlignment="Top" Click="savefile_Button_Click" Width="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft Tai Le">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="OpenFileBtnExc" Content="Open File" HorizontalAlignment="Left" Margin="323,298,0,0" VerticalAlignment="Top" Click="openfile_Button_Click" Width="80" RenderTransformOrigin="0.552,0.465" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft Tai Le">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="ClearBtnExc" Content="Clear" HorizontalAlignment="Left" Margin="163,298,0,0" VerticalAlignment="Top" Click="clear_Button_Click" Width="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft Tai Le">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="AttachBtnExc" Content="Attach" HorizontalAlignment="Left" Margin="584,298,0,0" VerticalAlignment="Top" Click="Attach_Button_Click" Width="73" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Microsoft Tai Le">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <ListBox x:Name="lastbox" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="552,21,0,37" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" SelectionChanged="ListBox_SelectionChanged"/>
+        </Grid>
+        <Grid x:Name="Home_Grid" Margin="32,16,0,0" Visibility="Hidden">
+            <Border BorderThickness="1" Margin="10,10,374,157" Height="145" Background="#FF0E0E0E" CornerRadius="10,10,10,10">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid>
+                    <Label Content="Status" Margin="0,0,0,119" Foreground="White" FontStyle="Normal" FontFamily="Microsoft New Tai Lue" HorizontalAlignment="Center"/>
+                    <Label x:Name="stsweb" Content="Web : Nil" Margin="10,24,0,94" Foreground="White" FontStyle="Normal" FontFamily="Microsoft New Tai Lue" HorizontalAlignment="Left" Width="272"/>
+                    <Label x:Name="stsnote" Content="Status Note: Nil" Margin="10,114,0,4" Foreground="White" FontStyle="Normal" FontFamily="Microsoft New Tai Lue" HorizontalAlignment="Left" Width="272"/>
+                    <Label x:Name="stsmain" Content="Main: Nil" Margin="10,84,0,34" Foreground="White" FontStyle="Normal" FontFamily="Microsoft New Tai Lue" HorizontalAlignment="Left" Width="272"/>
+                    <Label x:Name="stsapi" Content="Apis: Nil" Margin="10,54,0,64" Foreground="White" FontStyle="Normal" FontFamily="Microsoft New Tai Lue" HorizontalAlignment="Left" Width="272"/>
+
+                </Grid>
+            </Border>
+            <Border BorderThickness="1" Margin="10,161,374,8" Height="145" Background="#FF0E0E0E" CornerRadius="10,10,10,10">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Label Content="Coming Soon" Margin="0,60,0,60" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center"/>
+            </Border>
+            <Border BorderThickness="1" Margin="374,9,10,160" Height="145" Background="#FF0E0E0E" CornerRadius="10,10,10,10">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid>
+                    <Image x:Name="eventimg" Height="99" Margin="16,10,16,0" VerticalAlignment="Top" Source="/adsasdasfsasf.png" StretchDirection="Both" Stretch="Fill"/>
+                    <Button x:Name="eventbtnd" Content="Nil" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Width="262" Click="eventbtn" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+
+                </Grid>
+            </Border>
+            <Border BorderThickness="1" Margin="374,159,10,10" Height="145" Background="#FF0E0E0E" CornerRadius="10,10,10,10">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid>
+                    <Label Content="Need Help (click the buttons)" Margin="0,0,0,115" HorizontalAlignment="Center" Foreground="White"/>
+                    <Button x:Name="reroblox" Content="ReDownload Roblox" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Width="262" Click="reroblox_cl" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+                    <Button x:Name="disdef" Content="Disable Defender" HorizontalAlignment="Center" Margin="0,54,0,0" VerticalAlignment="Top" Width="262" Click="disdef_cl" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+                    <Button x:Name="redownfilesd" Content="ReDownload Files" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Width="262" Click="redownfiles" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+                    <Button x:Name="redownpros" Content="ReDownload Protector x" HorizontalAlignment="Center" Margin="0,113,0,0" VerticalAlignment="Top" Width="262" Click="redownpro" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}"/>
+
+                </Grid>
+            </Border>
+            <Button x:Name="s_Copy5" Margin="296,128,296,128" BorderBrush="{x:Null}" Click="piro_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/ProtectorX_ccexpress.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+
+
+        </Grid>
+        <Grid x:Name="SettingsGrid" Margin="31,16,0,0" Visibility="Visible">
+            <WrapPanel  HorizontalAlignment="Left" VerticalAlignment="Top"  Orientation="Horizontal" ScrollViewer.CanContentScroll="True">
+                <Grid Height="29" Width="338" Background="#FF0E0E0E">
+                    <Label Content="Top Most" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="29" Width="284"/>
+                    <CheckBox x:Name="topmost_box" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="313,0,0,0" Width="15" Height="18" Background="#FF00FF97" BorderBrush="{x:Null}" Click="topmost_box_chechked" Foreground="White">
+                        <CheckBox.Effect>
+                            <DropShadowEffect/>
+                        </CheckBox.Effect>
+                    </CheckBox>
+                </Grid>
+                <Grid Height="5" Width="338" RenderTransformOrigin="0.5,0.5"/>
+
+                <Grid Height="29" Width="338" Background="#FF0E0E0E">
+                    <Label Content="Protector X Custom Functions&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="29" Width="284"/>
+                    <CheckBox x:Name="protectorfnc_box" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="313,0,0,0" Width="15" Height="18" Background="#FF00FF97" BorderBrush="{x:Null}" Click="prt_clicked" Foreground="White">
+                        <CheckBox.Effect>
+                            <DropShadowEffect/>
+                        </CheckBox.Effect>
+                    </CheckBox>
+                </Grid>
+                <Grid Height="5" Width="338" RenderTransformOrigin="0.5,0.5"/>
+                <Grid Height="29" Width="338" Background="#FF0E0E0E">
+                    <Label Content="Protector X Optimized Mode&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="29" Width="284"/>
+                    <CheckBox x:Name="protectoropt_box" Content="CheckBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="313,0,0,0" Width="15" Height="18" Background="#FF00FF97" BorderBrush="{x:Null}" Click="prtoptclicked" Foreground="White">
+                        <CheckBox.Effect>
+                            <DropShadowEffect/>
+                        </CheckBox.Effect>
+                    </CheckBox>
+                </Grid>
+                <Grid Height="5" Width="338" RenderTransformOrigin="0.5,0.5"/>
+                <Grid Height="29" Width="338" Background="#FF0E0E0E">
+                    <Label Content="Api Sellection&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="29" Width="247"/>
+                    <ComboBox x:Name="settings_api" HorizontalAlignment="Stretch" Margin="247,0,0,0" Height="15" Foreground="Black" RenderTransformOrigin="0.498,0.456" Background="#FF151515"
+
+                        Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderBrush="{x:Null}" SelectionChanged="settings_api_changed">
+
+
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="White"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                        <ComboBoxItem Content="WeAreDevs"/>
+                        <ComboBoxItem Content="Krnl"/>
+                        <ComboBoxItem Content="Oxygen U"/>
+                        <ComboBoxItem Content="Fluxus"/>
+
+
+                    </ComboBox>
+
+                </Grid>
+
+                <Grid Height="5" Width="338" RenderTransformOrigin="0.5,0.5"/>
+                <Grid Height="29" Width="338" Background="#FF0E0E0E">
+                    <Label Content="troubleshooting" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" Height="29" Width="236"/>
+                    <Button Margin="236,5,0,5" Content="Start Troubleshooting" FontSize="10" Background="#FF191919" Foreground="White" Click="starttrob" >
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+
+                </Grid>
+                <Grid Height="5" Width="338" RenderTransformOrigin="0.5,0.5"/>
+
+                <Grid Height="29" Width="338" Background="#FF0E0E0E">
+                    <Label Content="Theme Sellection" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" Height="29" Width="247"/>
+                    <ComboBox x:Name="settings_theme" HorizontalAlignment="Stretch" Margin="247,0,0,0" Height="15" Foreground="Black" RenderTransformOrigin="0.498,0.456" Background="#FF121212"
+
+                        Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderBrush="{x:Null}" SelectionChanged="settings_theme_changeds" Grid.ColumnSpan="2">
+
+
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ComboBoxItem}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="White"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                        <ComboBoxItem Content="Old"/>
+                        <ComboBoxItem Content="New"/>
+
+
+                    </ComboBox>
+
+                </Grid>
+            </WrapPanel>
+        </Grid>
+        <Button x:Name="s_Copy4" Margin="4,10,673,296" BorderBrush="{x:Null}" Click="ProtectorLogos">
+            <Button.Background>
+                <ImageBrush ImageSource="/ProtectorX_ccexpress.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Grid x:Name="shubgrid" Margin="32,16,0,0" Visibility="Hidden">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Orientation="Horizontal" ScrollViewer.CanContentScroll="True" Height="314" Width="668" >
+                <Grid Width="353">
+                    <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="105,0,0,0">
+
+                        <Button Background="#FF171717" Margin="0,81,0,0" HorizontalAlignment="Left" Width="100" Click="execute_scripthub_thubs">
+                            <Button.Effect>
+                                <DropShadowEffect/>
+                            </Button.Effect>
+                            <Button.BorderBrush>
+                                <ImageBrush/>
+                            </Button.BorderBrush>
+                            <StackPanel Orientation="Horizontal" Height="14">
+                                <Image Width="21" Source="/Execute.png"/>
+                                <TextBlock Margin="5,-2,5,0" Foreground="White" Height="16" VerticalAlignment="Top" Text="Execute"/>
+                            </StackPanel>
+                        </Button>
+                        <Image Margin="0,0,0,19" Source="/wewqeqwe.PNG"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,0,0,0">
+
+                        <Button Background="#FF171717" Margin="0,81,0,0" Click="execute_scripthub_protectorxhubs">
+                            <Button.Effect>
+                                <DropShadowEffect/>
+                            </Button.Effect>
+                            <Button.BorderBrush>
+                                <ImageBrush/>
+                            </Button.BorderBrush>
+                            <StackPanel Orientation="Horizontal" Height="14">
+                                <Image Width="21" Source="/Execute.png"/>
+                                <TextBlock Margin="5,-2,5,0" Foreground="White" Height="16" VerticalAlignment="Top" Text="Execute"/>
+                            </StackPanel>
+                        </Button>
+                        <Image Margin="0,0,0,19" Source="ProtectorX.jpg"/>
+                    </Grid>
+                </Grid>
+
+
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Window>
